@@ -14,12 +14,6 @@ inputs:
   password:
     description: The SFTP password.
     required: false
-  key:
-    description: The private key.
-    required: false
-  passphrase: 
-    description: The passphrase for your private key.
-    required: false
   port:
     description: The SFTP port.
     required: false
@@ -31,12 +25,12 @@ inputs:
   uploads:
     description: A list of folders to upload in the format of `folder/ => upload_folder/`
     required: true
-  ignore:
-    description: a list of files to ignore using glob patterns
+  delete_folders:
+    description: a list of files or folders to delete using glob patterns
     required: false
-  ignore-from:
-    description: the path to a file containing a list of files to ignore using glob patterns
-    required: false
+  pterodactyl_api_key:
+    description: Pterodacyt API key
+    required: true
   delete:
     description: If true, any existing files in the remote upload directories are deleted.
     required: false
